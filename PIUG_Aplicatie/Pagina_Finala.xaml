@@ -1,0 +1,17 @@
+﻿<Window x:Class="PIUG_Aplicatie.Pagina_Finala"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIUG_Aplicatie"
+        mc:Ignorable="d"
+        Title="Pagina_Finala" Height="450" Width="800">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Name="lblSubtitlu" Content="Felicitări! Ai rezolvat quiz-ul!" Margin="0 10" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0" Background="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}" FontWeight="Bold"/>
+        <Button Content="Închide aplicația" Click="btnInchide_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Background="Aqua"  FontWeight="Bold"/>
+    </Grid>
+</Window>

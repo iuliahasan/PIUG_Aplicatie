@@ -1,0 +1,48 @@
+﻿<Window x:Class="PIUG_Aplicatie.Task_Manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIUG_Aplicatie"
+        mc:Ignorable="d"
+        Title="Task_Manager" Height="500" Width="900">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Task Manager" FontSize="24" HorizontalAlignment="Left" Margin="327,10,0,10" Grid.ColumnSpan="2"/>
+
+        <StackPanel Grid.Row="1" Margin="10,10,10,10" Grid.ColumnSpan="2">
+            <!-- Adăugare sarcină -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBox x:Name="taskNameTextBox" Width="200" Margin="0,0,10,0" Text="Numele sarcinii" Background="Aqua"/>
+                <Button Content="Adăugare sarcină" Click="AddTaskButton_Click"/>
+                <Button Content="Quiz" Click="QuiButton_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBox x:Name="searchTextBox" Width="200" Margin="0,0,10,0" Text="Căutare..." TextChanged="searchTextBox_TextChanged" Background="Aqua"/>
+                <ComboBox x:Name="filterComboBox" Width="150" Margin="0,0,10,0" SelectionChanged="filterComboBox_SelectionChanged" Background="Aqua">
+                    <ComboBoxItem Content="Toate"/>
+                    <ComboBoxItem Content="Active"/>
+                    <ComboBoxItem Content="Încheiate"/>
+                </ComboBox>
+            </StackPanel>
+            <ListView x:Name="taskListView" Grid.Row="1" Margin="0,10" Background="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Nume" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                        <GridViewColumn Header="Prioritate" DisplayMemberBinding="{Binding Priority}" Width="100"/>
+                        <GridViewColumn Header="Termen limită" DisplayMemberBinding="{Binding Deadline}" Width="150"/>
+                        <GridViewColumn Header="Stare" DisplayMemberBinding="{Binding Status}" Width="100"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>

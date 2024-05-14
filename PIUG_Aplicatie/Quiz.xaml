@@ -1,0 +1,73 @@
+﻿<Window x:Class="PIUG_Aplicatie.Quiz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIUG_Aplicatie"
+        mc:Ignorable="d"
+        Title="Quiz" Height="450" Width="800">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Margin="0,0,-343,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Quiz" FontSize="24" HorizontalAlignment="Center" Margin="0,10"/>
+
+        <StackPanel Grid.Row="1" Margin="10,10,10,-30">
+            <StackPanel x:Name="stackPanelIntrebare1"  Orientation="Horizontal" Margin="0,0,0,10" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+                <Label Content="1.Care limbaj de programare este orientat pe obiecte?" Background="Aqua"/>
+                <RadioButton Content="Java" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="C" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="Python" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="HTML" Background="Aqua" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel x:Name="stackPanelIntrebare2"  Orientation="Horizontal" Margin="1,0,0,10" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+                <Label Content="2.Ce este un loop în programare?" Background="Aqua"/>
+                <RadioButton Content="Un tip de dată" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="O funcție matematică" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="O instrucțiune care se repetă" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="Un simbol special în cod" Background="Aqua" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel x:Name="stackPanelIntrebare3"  Orientation="Horizontal" Margin="1,0,0,10" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+                <Label Content="3.Ce este SQL?" Background="Aqua"/>
+                <RadioButton Content="Structured Language Query" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="Sequential Query Language" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="Structured Query Language" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="Sequential Language Query" Background="Aqua" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel x:Name="stackPanelIntrebare4" Orientation="Horizontal" Margin="1,0,0,10" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+                <Label Content="4.Care dintre următoarele este un tip de bază de date?" Background="Aqua"/>
+                <RadioButton Content="MySQL" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="JSON" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="XML" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="CSV" Background="Aqua" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel x:Name="stackPanelIntrebare5" Orientation="Horizontal" Margin="1,0,0,10" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+                <Label Content="5.Ce este HTML?" Background="Aqua"/>
+                <RadioButton Content="Hyper Text Markup Language" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="High Tech Markup Language" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="Hyperlink and Text Markup Language" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="High-level Text Markup Language" Background="Aqua" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel x:Name="stackPanelIntrebare6" Orientation="Horizontal" Margin="1,0,0,10" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+                <Label Content="6.Care dintre următoarele este un framework CSS?" Background="Aqua"/>
+                <RadioButton Content="jQuery" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="Bootstrap" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="Django" Background="Aqua" FontWeight="Bold"/>
+                <RadioButton Content="Angular" Background="Aqua" FontWeight="Bold"/>
+            </StackPanel>
+
+            
+            <StackPanel Width="123">
+                <Button Content="Validare raspunsuri" Background="Aqua" Click="Button_Click_1"/>
+                <Button Content="Pagina urmatoare" Background="Aqua" Click="Button_Click"/>   
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
